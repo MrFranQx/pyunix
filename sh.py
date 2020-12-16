@@ -1,5 +1,5 @@
 def sh(user="root"):     # Define shell function with user defaulting to root
-    env = {}      # Initialize empty environment
+    env = {"USER":user}      # Initialize environment with user variable
     
     if user=="root":    # If user is root, set term prefix to # and permissions to true,
         term="# "

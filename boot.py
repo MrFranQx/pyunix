@@ -1,4 +1,7 @@
 import sh # import shell
 
 def boot(): # define boot function
-    sh.sh() # run shell
+    try:
+        sh.sh() # run shell
+    except EOFError: # if EOF raised, proceed with boot
+        pass
